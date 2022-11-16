@@ -1,5 +1,7 @@
 package com.ejer.itemseparator;
 
+import com.ejer.consola.Consola;
+
 /**
  * Clase que almacena
  */
@@ -47,6 +49,15 @@ public class ItemSeparator {
         price = Double.valueOf(valores[ITEMPRICE]);
         quantity = Integer.valueOf(valores[ITEMQUANTITY]); //Number format
 
+    }
+
+    public String devolverMetadatos() {
+        StringBuilder stringMetadatos = new StringBuilder();
+        stringMetadatos.append("Nombre: " + this.getName() + Consola.RETORNO_CARRO);
+        stringMetadatos.append("Precio: " + this.getPrice() + Consola.RETORNO_CARRO);
+        stringMetadatos.append("Cantidad: " + this.getQuantity() + Consola.RETORNO_CARRO);
+
+        return  stringMetadatos.toString();
     }
 
     public String getName() {
